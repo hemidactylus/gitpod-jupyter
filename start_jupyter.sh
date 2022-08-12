@@ -3,6 +3,7 @@
 jupyter notebook \
     --no-browser \
     --NotebookApp.allow_origin=\'$(gp url 8888)\' \
+    --NotebookApp.notebook_dir=my_notebooks
     2>&1 \
   | tee .jupyter_log.log &
 
