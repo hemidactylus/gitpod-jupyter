@@ -1,17 +1,13 @@
 tasks:
-  - name: bash
-    command: |
-      cd /workspace/workshop-ai-as-api
-      echo -e "\n\n\t\t** READY TO START... **\n\n"
-      gp open README.md
-  - name: api-shell
+  - name: my-shell
     before: |
       cd /workspace/gitpod-jupyter
       python -m pip install --upgrade pip
       pip install -r requirements.txt 2>&1 > install.log
     command: |
-      cd /workspace/gitpod-jupyter/notebook
-      echo -e "\n\n\t\t** PLACEHOLDER **\n\n"
+      cd /workspace/gitpod-jupyter
+      echo -e "\n\n\t\t** Starting notebook ... **\n\n"
+      ./start_jupyter.sh
 github:
   prebuilds:
     master: true
