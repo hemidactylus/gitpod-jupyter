@@ -21,7 +21,7 @@ done
 
 if [ -n "${J_TOKEN}" ]; then
   echo "TOKEN WAS FOUND";
-  JUPYTER_URL="$(gp url 8888)/?token=${J_TOKEN}"
+  JUPYTER_URL="$(gp url 8888)/notebooks/my_notebook.ipynb?token=${J_TOKEN}"
   echo -e "\n\n\n\n\n\t\t** OPENING NOTEBOOK IN NEW TAB. PLEASE CHECK YOUR POP-UP BLOCKER **\n";
   gp preview --external "${JUPYTER_URL}";
 else
